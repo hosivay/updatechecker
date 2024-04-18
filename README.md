@@ -1,5 +1,10 @@
 # UpdaterMaster
+
+ Developed with 💙 by [Hossein Valipour (Hosivay)](https://hosivay.github.io/)
  
+[![Version](https://img.shields.io/pub/v/updatermaster)](https://pub.dev/packages/updatermaster)
+[![Star](https://img.shields.io/github/stars/hosivay/updatermaster)](https://github.com/hosivay/updatermaster)
+---
 A package to check the new version of the application.
 
 ## Platform Support
@@ -8,12 +13,24 @@ A package to check the new version of the application.
 | :-----: | :---: | :---: | :---: | :---: | :-----: |
 |✅|✅|✅|✅|✅|✅|
 
-## Usage
+ ## Getting started
 
-You can use UpdateChecker to query information about the new version of the application.
+ Add `updatermaster` as a dependency in your `pubspec.yaml`:
+
+ ```yaml
+ dependencies:
+    updatermaster: ^0.0.2
+ ```
+
+ Update your packages with `flutter pub get`.
+
+## Usage
+Check Update with github :
+
+You can use UpdateChecker to query information about the new version of the program from the GitHub repository.
 
 ```dart
-import 'package:updatermaster/update/updatermaster.dart';
+import 'package:updatermaster/updatermaster.dart';
 
 ...
 
@@ -21,7 +38,7 @@ import 'package:updatermaster/update/updatermaster.dart';
 
   @override
   void initState() {
-    _checker = UpdaterMaster().withgithub(
+    _checker = UpdaterMaster.withGithub(
       repo: "https://github.com/username/repo",
       version: "v1.3.0" //The current version of your program 
     );

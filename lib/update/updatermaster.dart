@@ -1,17 +1,14 @@
-import 'dart:convert'; 
-import 'package:http/http.dart' as http; 
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 class UpdaterMaster {
   /// example repo : https://github.com/hosivay/blackbird
   /// //
   /// example version : v1.0.0
-  Future<bool> withgithub(
+  static Future<bool> withGithub(
       {required String repo,
       required String version,
       bool printdebug = true}) async {
-
-  
- 
     String userName;
     String repositoryName;
     List<String> parts = repo.split('/');
@@ -47,4 +44,9 @@ class UpdaterMaster {
       return false;
     }
   }
+
+  // static Future withSource({required String source}) async {
+  //   final response = await http.post(Uri.parse(source));
+  //   return jsonDecode(response.body);
+  // }
 }

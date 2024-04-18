@@ -1,6 +1,6 @@
 name: updatermaster
 description: "A package to check the new version of the application."
-version: 0.0.1
+version: 0.0.2
 homepage: https://flutterzone.ir/
 
 environment:
